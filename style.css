@@ -1,0 +1,502 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #09060b;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at 50% 35%, rgba(255, 80, 150, 0.28), transparent 38%),
+    linear-gradient(135deg, #09060b, #180914, #09060b);
+}
+
+.hero-content {
+  width: 100%;
+  padding: 30px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-small {
+  font-size: 13px;
+  letter-spacing: 6px;
+  color: #eab2c9;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(55px, 10vw, 125px);
+  line-height: 0.95;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #ffb1d0,
+    #e993ba,
+    #ffffff
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-date {
+  margin-top: 25px;
+  font-size: 18px;
+  letter-spacing: 7px;
+  color: #f0bfd2;
+}
+
+.enter-btn {
+  margin-top: 45px;
+  padding: 15px 38px;
+
+  border: 1px solid rgba(255, 190, 215, 0.6);
+  border-radius: 50px;
+
+  background: rgba(255,255,255,0.06);
+  color: white;
+
+  cursor: pointer;
+  font-size: 14px;
+  letter-spacing: 2px;
+
+  transition: 0.35s ease;
+}
+
+.enter-btn:hover {
+  transform: translateY(-3px);
+  background: #ef9abb;
+  color: #160914;
+  box-shadow: 0 0 35px rgba(255,100,170,0.45);
+}
+
+
+/* SECTIONS */
+
+section {
+  width: 100%;
+  padding: 100px 7%;
+}
+
+.intro {
+  text-align: center;
+  background: #09060b;
+}
+
+.intro p {
+  max-width: 700px;
+  margin: auto;
+
+  color: #d8cbd2;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.section-title {
+  text-align: center;
+
+  font-size: clamp(32px, 5vw, 58px);
+  margin-bottom: 55px;
+
+  background: linear-gradient(90deg, #fff, #efa1c1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* GALLERY */
+
+.gallery {
+  width: 100%;
+  max-width: 1250px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 32px;
+}
+
+.photo-card {
+  width: 100%;
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background: #140b12;
+  border: 1px solid rgba(255,180,210,0.18);
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.5);
+
+  transition: 0.4s ease;
+}
+
+.photo-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 30px 70px rgba(0,0,0,0.6),
+    0 0 35px rgba(255,100,170,0.15);
+}
+
+.photo-card img {
+  display: block;
+
+  width: 100%;
+  height: 500px;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.6s ease;
+}
+
+.photo-card:hover img {
+  transform: scale(1.04);
+}
+
+
+/* MESSAGE */
+
+.message {
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255,100,170,0.13),
+      transparent 50%
+    ),
+    #09060b;
+}
+
+.message-box {
+  width: 100%;
+  max-width: 800px;
+
+  margin: auto;
+  padding: 55px 40px;
+
+  border-radius: 30px;
+
+  background: rgba(255,255,255,0.035);
+  border: 1px solid rgba(255,180,210,0.18);
+
+  box-shadow: 0 25px 70px rgba(0,0,0,0.45);
+}
+
+.message-box p {
+  color: #eadce2;
+  font-size: 18px;
+  line-height: 2;
+}
+
+
+/* BIRTHDAY */
+
+.birthday-circle {
+  width: 220px;
+  height: 220px;
+
+  margin: 40px auto;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  border: 1px solid rgba(255,170,205,0.5);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,150,190,0.22),
+      rgba(255,255,255,0.02)
+    );
+
+  box-shadow:
+    0 0 50px rgba(255,100,170,0.2);
+}
+
+
+/* GIFT */
+
+.gift-section {
+  text-align: center;
+}
+
+.gift-box {
+  width: 150px;
+  height: 150px;
+
+  margin: 60px auto 30px;
+
+  position: relative;
+  cursor: pointer;
+
+  transition: 0.4s ease;
+}
+
+.gift-box:hover {
+  transform: translateY(-8px) scale(1.05);
+}
+
+.gift-body {
+  position: absolute;
+
+  width: 150px;
+  height: 110px;
+
+  bottom: 0;
+
+  border-radius: 8px;
+
+  background: linear-gradient(
+    135deg,
+    #e987ad,
+    #a94c78
+  );
+}
+
+.gift-lid {
+  position: absolute;
+
+  width: 165px;
+  height: 35px;
+
+  top: 20px;
+  left: -7px;
+
+  border-radius: 7px;
+
+  background: linear-gradient(
+    135deg,
+    #ffb5d0,
+    #c95b8b
+  );
+
+  z-index: 2;
+}
+
+.gift-ribbon {
+  position: absolute;
+
+  width: 25px;
+  height: 150px;
+
+  left: 63px;
+  top: 20px;
+
+  background: #f7d5df;
+
+  z-index: 3;
+}
+
+.gift-message {
+  margin-top: 25px;
+
+  color: #f2b4cb;
+  font-size: 18px;
+}
+
+
+/* FINAL */
+
+.final {
+  min-height: 70vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255,100,170,0.18),
+      transparent 50%
+    ),
+    #08050a;
+}
+
+.final h1 {
+  font-size: clamp(40px, 8vw, 90px);
+
+  background:
+    linear-gradient(
+      90deg,
+      #fff,
+      #ffabc9,
+      #fff
+    );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.final p {
+  margin-top: 25px;
+  color: #d9cbd2;
+  font-size: 18px;
+}
+
+
+/* PARTICLES */
+
+.particle {
+  position: fixed;
+
+  width: 3px;
+  height: 3px;
+
+  border-radius: 50%;
+
+  background: #ffb1cf;
+
+  pointer-events: none;
+
+  opacity: 0.7;
+
+  box-shadow: 0 0 12px #ff8fba;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  section {
+    padding: 75px 14px;
+  }
+
+  .hero {
+    min-height: 100svh;
+  }
+
+  .hero-content {
+    padding: 25px 15px;
+  }
+
+  .hero-small {
+    font-size: 10px;
+    letter-spacing: 4px;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 16vw, 75px);
+  }
+
+  .hero-date {
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  .enter-btn {
+    padding: 14px 30px;
+  }
+
+
+  /* ONE BIG PHOTO PER ROW */
+
+  .gallery {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+  .photo-card {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .photo-card img {
+    width: 100%;
+
+    height: 520px;
+
+    object-fit: cover;
+    object-position: center;
+  }
+
+
+  .section-title {
+    margin-bottom: 38px;
+    font-size: 36px;
+  }
+
+  .intro p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .message-box {
+    padding: 35px 22px;
+  }
+
+  .message-box p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .birthday-circle {
+    width: 180px;
+    height: 180px;
+  }
+
+}
+
+
+/* VERY SMALL PHONES */
+
+@media (max-width: 400px) {
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero-date {
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  .photo-card img {
+    height: 470px;
+  }
+
+  .message-box {
+    padding: 30px 18px;
+  }
+
+}
